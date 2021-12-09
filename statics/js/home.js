@@ -379,7 +379,7 @@ var MAC={
             $('.mac_search').click(function(){
                 var that=$(this);
                 var url = that.attr('data-href') ? that.attr('data-href') : maccms.path + '/index.php/vod/search.html';
-                location.href = url + '?wd='+ encodeURIComponent($("#wd").val());
+                //location.href = url + '?wd='+ encodeURIComponent($("#wd").val());
             });
         },
         'Submit':function(){
@@ -419,7 +419,7 @@ var MAC={
                     }
                 }).result(function (event, data, formatted) {
                     $($obj).val(data.name);
-                    location.href = data.url.replace('mac_wd', encodeURIComponent(data.name));
+                    //location.href = data.url.replace('mac_wd', encodeURIComponent(data.name));
                 });
             }
             catch(e){}
