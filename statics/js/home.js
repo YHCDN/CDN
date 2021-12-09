@@ -379,7 +379,7 @@ var MAC={
             $('.mac_search').click(function(){
                 var that=$(this);
                 var url = that.attr('data-href') ? that.attr('data-href') : maccms.path + '/index.php/vod/search.html';
-                //location.href = url + '?wd='+ encodeURIComponent($("#wd").val());
+                location.href = url + '?wd='+ encodeURIComponent($("#wd").val());
             });
         },
         'Submit':function(){
@@ -419,7 +419,7 @@ var MAC={
                     }
                 }).result(function (event, data, formatted) {
                     $($obj).val(data.name);
-                    //location.href = data.url.replace('mac_wd', encodeURIComponent(data.name));
+                    location.href = data.url.replace('mac_wd', encodeURIComponent(data.name));
                 });
             }
             catch(e){}
@@ -906,7 +906,7 @@ $(function(){
     //用户访问记录初始化
     MAC.Ulog.Init();
     //联想搜索初始化
-    MAC.Suggest.Init('.mac_wd',1,'');
+    //MAC.Suggest.Init('.mac_wd',1,'');
     //定时任务初始化
     MAC.Timming();
 });
