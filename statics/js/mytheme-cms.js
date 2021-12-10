@@ -168,7 +168,7 @@ var Myui = {
 			    }
 			}).result(function (event, data, formatted) {
 			    $(this).val(data.name);
-			    location.href = data.url.replace('mac_wd', encodeURIComponent(data.name));
+			    //location.href = data.url.replace('mac_wd', encodeURIComponent(data.name));
 			});
 		}
 		catch(e){}
